@@ -7,6 +7,8 @@
 body{
     background-color: black;
     font-family: 'Inter', sans-serif;
+    width: 100vw;
+    /* overflow-x: hidden; */
 }
 h1{
     color: white;
@@ -18,50 +20,58 @@ input{
     color: white;
     background-color: black;
     border: 1px solid white;
-    height: 60px;
-    width: 500px;
+    height: 3.5rem;
+    width: 25rem;
     padding: 2px 20px ;
-    margin-inline: 20px;
+    margin-inline: 10px;
     margin-block: 20px;
 }
 button{
-    height: 60px;
-    width: 600px;
-    margin-left: 20px;
+    height: 3.5rem;
+    width: 28rem;
+    margin-left: 8px;
     border: none;
     margin-top: 30px;
 }
 button:hover{
     cursor: pointer;
 }
+
 .container{
     display: flex;
-    padding: 20px;
+    padding-left: 2rem;
     margin: 0px 20px 0px 20px; 
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 5rem;
 }
+
 .searchbar{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-block: 20px;
+    margin-block: 2rem;
+    width: 100%;
 }
 #search{
-    height: 60px;
-    width: 93.5vw;
+    height: 4rem;
+    width: 95%;
 }
 .student-table{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-block: 25px;
+    margin-block: 2rem;
+    flex-wrap: wrap;
+    width: 100%;
 }
 table{
     color: white;
     border:1px solid white;
     border-collapse: collapse;
-    width: 93.5vw;
+    width: 95%;
 }
 th{
     border: 1px solid white;
@@ -72,4 +82,61 @@ th,td{
 }
 td{
     border-right: 1px solid white;
+}
+.icon{
+    cursor: pointer;
+}
+.degree{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width:768px){
+    .container{
+        padding: 0;
+        padding-left: 1.5rem;
+    }
+    h1{
+        text-align: center;
+        padding: 0;
+        margin-block: 2rem;
+        margin-left: 0;
+        font-size: 2rem;
+    }
+    input{
+        width: 70vw;
+        margin-left: 0;
+    }
+    button{
+        width: 83vw;
+        margin-left: -0.5rem;
+        padding-left: 0;
+    }
+    .searchbar{
+        width: 100%;
+    }
+    #search{
+        width: 90%;
+        margin: 0;
+    }
+    .student-table{
+        /* padding-inline: auto; */
+        width: 100vw;
+        margin-block: 0;
+    }
+    table{
+        width: 90vw;
+        font-size: 12px;
+    }
+    th{
+        font-size: 10px;
+    }
+    th,td{
+        padding: 2px 3px;
+    }
+    td{
+        padding-block: 5px;
+    }
 }
